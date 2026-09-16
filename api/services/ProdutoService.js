@@ -14,6 +14,16 @@ class ProdutoService {
   }
 
   criar(dados) {
+    if (
+      !dados ||
+      typeof dados.nome !== 'string' ||
+      dados.nome.trim() === '' ||
+      typeof dados.preco !== 'number' ||
+      dados.preco <= 0
+    ) {
+      throw new Error('Produto invalido');
+    }
+
     return this.repository.create(dados);
   }
 
