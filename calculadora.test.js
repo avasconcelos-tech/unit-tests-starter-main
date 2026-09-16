@@ -61,7 +61,7 @@ describe("media", () => {
   test("Calcular a media quando o resultado for um número decimal", () => {
     expect(media([1.5, 1.5, 3])).toBeCloseTo(2);
   });
-
+k
   test("Lançar erro quando a lista de números for vazia", () => {
     expect(() => media([])).toThrow("A lista de numeros nao pode ser vazia");
   });
